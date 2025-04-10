@@ -42,16 +42,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const productCards = document.querySelectorAll('.product-card');
     productCards.forEach(card => {
         card.addEventListener('click', function(e) {
-            // Make sure the click came from the add-to-cart button by checking its class
             if (e.target.classList.contains('add-to-cart-btn')) {
+                const descriptionElement = this.querySelector('p');
                 const product = {
                     id: Date.now(),
                     name: this.querySelector('h3').textContent,
-                    description: this.querySelector('p').textContent,
+                    description: descriptionElement ? descriptionElement.textContent : "", // valor padrão se não existir
                     price: parseFloat(this.querySelector('.price').textContent.replace('R$ ', '').replace(',', '.'))
                 };
 
-                // Add product to the cart, update cart display, and show the cart
                 cart.push(product);
                 updateCart();
                 showCart();
