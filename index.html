@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Digital</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#promocoes">Promoções</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="cart-section">
+            <div class="cart-toggle">
+                🛒 <span class="cart-count">0</span>
+            </div>
+            <div class="cart">
+                <div class="cart-header">
+                    <h2>🛒 Meu Carrinho</h2>
+                    <button class="close-cart">&times;</button>
+                </div>
+                <div class="cart-items"></div>
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span>R$ <span id="cart-total">0.00</span></span>
+                </div>
+                <button class="checkout-btn">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-container">
+        <div class="banner-image">
+            <img src="https://paviloche.com.br/wp-content/uploads/2022/02/diversas-bolas-de-sorvete-baixa-1536x536.jpg">
+        </div>
+    </div>
+
+    <h2 class="welcome-title">Seja Bem Vindo</h2>
+
+    <div class="categories">
+        <div class="category-item" data-category="sorvetes">
+            <h3>Sorvetes</h3>
+        </div>
+        <div class="category-item" data-category="acais">
+            <h3>Açaís</h3>
+        </div>
+        <div class="category-item" data-category="milkshakes">
+            <h3>Milk Shakes</h3>
+        </div>
+    </div>
+
+    <section class="products">
+        <!-- Sorvetes Section -->
+        <div class="category-section" id="sorvetes-section">
+            <h2>Sorvetes</h2>
+            <div class="product-container">
+                <div class="product-card" data-category="sorvetes">
+                    <img src="https://s2-receitas.glbimg.com/w33DdxUvvrRZw8p0WpkK-zzMN-g=/696x390/smart/filters:cover():strip_icc()/i.s3.glbimg.com/v1/AUTH_e84042ef78cb4708aeebdf1c68c6cbd6/internal_photos/bs/2019/V/w/ESsbzoTuG3kA0Wo2VKlQ/shutterstock-1010248351.jpg" alt="Sorvete de Chocolate">
+                    <h3>Sorvete de Chocolate</h3>
+                    <p>Delicioso sorvete cremoso de chocolate</p>
+                    <span class="price">R$ 12,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="sorvetes">
+                    <img src="https://anamariabrogui.com.br/assets/uploads/receitas/fotos/usuario-2270-894911727c3ddea05638262b9668d4f0.jpg" alt="Sorvete de Morango" alt="Sorvete de Morango">
+                    <h3>Sorvete de Morango</h3>
+                   
+                    <span class="price">R$ 12,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="sorvetes">
+                    <img src="https://img.pikbest.com/wp/202343/ice-cream-scoop-deliciously-creamy-scooped-pistachio-with-sweet-yogurt-dessert_9984925.jpg!w700wp" alt="Sorvete de Pistache">
+                    <h3>Sorvete de Pistache</h3>
+                    <p>Sorvete cremoso de pistache com nozes</p>
+                    <span class="price">R$ 15,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="sorvetes">
+                    <img src="https://s2-receitas.glbimg.com/_YCfoopwbak2xvG8FpHpXEwhxvg=/0x0:500x350/984x0/smart/filters:strip_icc()/s.glbimg.com/po/rc/media/2012/10/29/16_12_31_415_cookiesandcream1.png" alt="Sorvete de Cookies">
+                    <h3>Sorvete de Cookies</h3>
+                    <p>Sorvete com pedaços de cookies e calda de chocolate</p>
+                    <span class="price">R$ 14,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="sorvetes">
+                    <img src="https://doremussorvetes.com.br/wp-content/uploads/2022/12/IMG-09.jpg" alt="Sorvete de Flocos">
+                    <h3>Sorvete de Flocos</h3>
+                    <p>Sorvete de baunilha com flocos de chocolate</p>
+                    <span class="price">R$ 13,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="sorvetes">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3O85iNrPVX9-t4THyz4u875WSrJRLbxT5jQ&s" alt="Sorvete de Coco">
+                    <h3>Sorvete de Coco</h3>
+                    <p>Sorvete cremoso de coco com raspas naturais</p>
+                    <span class="price">R$ 13,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Add more sorvetes products here -->
+            </div>
+        </div>
+
+        <!-- Açaís Section -->
+        <div class="category-section" id="acais-section">
+            <h2>Açaís</h2>
+            <div class="product-container">
+                <div class="product-card" data-category="acais">
+                    <img src="example.com/acai1.jpg" alt="Açaí Tradicional">
+                    <h3>Açaí Tradicional</h3>
+                    <p>Açaí na tigela com granola e banana</p>
+                    <span class="price">R$ 15,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="acais">
+                    <img src="example.com/acai2.jpg" alt="Açaí com Nutella">
+                    <h3>Açaí com Nutella</h3>
+                    <p>Açaí na tigela com Nutella e morango</p>
+                    <span class="price">R$ 18,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="acais">
+                    <img src="example.com/acai3.jpg" alt="Açaí Proteico">
+                    <h3>Açaí Proteico</h3>
+                    <p>Açaí na tigela com whey protein e banana</p>
+                    <span class="price">R$ 20,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="acais">
+                    <img src="example.com/acai4.jpg" alt="Açaí com Paçoca">
+                    <h3>Açaí com Paçoca</h3>
+                    <p>Açaí na tigela com paçoca e leite condensado</p>
+                    <span class="price">R$ 17,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="acais">
+                    <img src="example.com/acai5.jpg" alt="Açaí com Frutas">
+                    <h3>Açaí com Frutas</h3>
+                    <p>Açaí na tigela com mix de frutas frescas</p>
+                    <span class="price">R$ 19,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="acais">
+                    <img src="example.com/acai6.jpg" alt="Açaí Power">
+                    <h3>Açaí Power</h3>
+                    <p>Açaí na tigela com granola, mel e castanhas</p>
+                    <span class="price">R$ 22,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Add more açaí products here -->
+            </div>
+        </div>
+
+        <!-- Milk Shakes Section -->
+        <div class="category-section" id="milkshakes-section">
+            <h2>Milk Shakes</h2>
+            <div class="product-container">
+                <div class="product-card" data-category="milkshakes">
+                    <img src="example.com/milkshake1.jpg" alt="Milk Shake Ovomaltine">
+                    <h3>Milk Shake Ovomaltine</h3>
+                    <p>Milk shake cremoso com Ovomaltine</p>
+                    <span class="price">R$ 18,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="milkshakes">
+                    <img src="example.com/milkshake2.jpg" alt="Milk Shake Nutella">
+                    <h3>Milk Shake Nutella</h3>
+                    <p>Milk shake cremoso com Nutella e chantilly</p>
+                    <span class="price">R$ 20,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="milkshakes">
+                    <img src="example.com/milkshake3.jpg" alt="Milk Shake Oreo">
+                    <h3>Milk Shake Oreo</h3>
+                    <p>Milk shake com biscoitos Oreo e calda de chocolate</p>
+                    <span class="price">R$ 19,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="milkshakes">
+                    <img src="example.com/milkshake4.jpg" alt="Milk Shake Chocolate Belga">
+                    <h3>Milk Shake Chocolate Belga</h3>
+                    <p>Milk shake premium com chocolate belga</p>
+                    <span class="price">R$ 22,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="milkshakes">
+                    <img src="example.com/milkshake5.jpg" alt="Milk Shake Caramelo">
+                    <h3>Milk Shake Caramelo</h3>
+                    <p>Milk shake com calda de caramelo e amendoim</p>
+                    <span class="price">R$ 18,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <div class="product-card" data-category="milkshakes">
+                    <img src="example.com/milkshake6.jpg" alt="Milk Shake Morango">
+                    <h3>Milk Shake Morango</h3>
+                    <p>Milk shake de morango com chantilly</p>
+                    <span class="price">R$ 17,00</span>
+                    <button class="add-to-cart-btn" onclick="addToCart(this)">Adicionar ao Carrinho</button>
+                </div>
+                <!-- Add more milkshake products here -->
+            </div>
+        </div>
+    </section>
+
+    <div id="checkout-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Finalizar Compra</h2>
+            <form id="checkout-form">
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="payment">Forma de Pagamento:</label>
+                <select id="payment" name="payment" required>
+                    <option value="">Escolha...</option>
+                    <option value="credito">Cartão de Crédito</option>
+                    <option value="debito">Cartão de Débito</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="pix">PIX</option>
+                </select>
+
+                <button type="submit">Confirmar Compra</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
